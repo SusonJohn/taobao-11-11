@@ -143,6 +143,7 @@ function runTaobao(appName, activityData, taskList) {
     });
     randomSleep(1000 * speed);
     className("android.widget.Button").text("赚喵币").waitFor();
+    randomSwipe();//增加自动下划，保障按钮没有被遮挡
     randomSleep(1000 * speed);
     if (!textContains("累计任务奖励").exists()) {
         clickContent("赚喵币");
